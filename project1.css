@@ -1,0 +1,115 @@
+body {
+  margin: 0;  
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "header header"
+  "left right"
+  "footer footer";
+  grid-template-rows: 55px 1fr 35px;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  grid-area: header;
+  height: 55px;
+  justify-content: center;
+  align-items: center;
+  
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+}
+
+.left-section {
+  grid-area: left;
+  border-right: 1px solid black;
+  
+  vertical-align: middle;
+ 
+}
+
+.form{
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  padding:50px 50px 50px 0 ;
+  grid-row-gap: 20px;
+  grid-column-gap: 10px;
+}
+
+#submit-btn {
+  cursor: pointer;
+  height: 40px;
+}
+
+.title {
+  display: grid;
+  grid-column: 1 / 2;
+  font-family: arial;
+  text-align: end;
+  line-height: 40px;
+  height: 40px;
+  
+}
+
+
+input{
+  grid-column: 2 / 3;
+  height: 40px;
+  border-radius: 6px;
+}
+
+button {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 6px;
+  grid-column: 2 / 3;
+  border: none;
+  background-color: rgb(52, 91, 199);
+  color: white;
+  font-family: arial;
+  font-weight: bold;
+}
+
+input {
+  border: 1px solid lightgrey;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+.right-section {
+  display: grid;  /* !is this correct */ 
+  grid-area: right;  
+  padding: 50px 60px 30px 60px;
+  
+}
+
+table, th, td {
+  border: 1px solid rgb(185, 185, 185);
+  border-collapse: collapse;
+  text-align: center;
+  height: 40px;
+}
+
+th {
+  background-color: rgb(223, 219, 219);
+  
+}
+
+.age {
+  text-decoration: underline;
+}
+
+footer {
+  display: flex;
+  grid-area: footer;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+}
